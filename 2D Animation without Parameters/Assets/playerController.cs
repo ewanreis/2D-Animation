@@ -26,7 +26,7 @@ public class playerController : MonoBehaviour
     }
     void Update()
     {
-        xAxis = Imput.GetAxisRaw("Horizontal");
+        xAxis = Input.GetAxisRaw("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space))
             isJumpPressed = true;
         if (Input.GetKeyDown(KeyCode.RightControl))
@@ -39,7 +39,7 @@ public class playerController : MonoBehaviour
             isGrounded = true;
         else
             isGrounded = false;
-        Vector2 vel = new Vector2(object, rb2d.velocity.y);
+        Vector2 vel = new Vector2(0, rb2d.velocity.y);
         if (xAxis < 0)
         {
             vel.x = -walkSpeed;
